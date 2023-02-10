@@ -2,6 +2,11 @@
 buildscript {
     ext.room_version = "2.5.0"
     ext.coroutines_version = "1.6.1"
+    ext.nav_version = "2.5.3"
+
+    dependencies {
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+    }
 }
 plugins {
     id 'com.android.application' version '7.3.1' apply false
@@ -20,6 +25,9 @@ ext {
     dependencies.junit = "junit:junit:4.13.2"
     dependencies.junitTest = "androidx.test.ext:junit:1.1.5"
     dependencies.espressoCore = "androidx.test.espresso:espresso-core:3.5.1"
+
+    dependencies.navKtx = "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    dependencies.navUiKtx =  "androidx.navigation:navigation-ui-ktx:$nav_version"
 
     dependencies.roomRuntime = "androidx.room:room-runtime:$room_version"
     dependencies.roomCompiler = "androidx.room:room-compiler:$room_version"

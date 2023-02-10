@@ -1,7 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
     id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -55,4 +57,7 @@ dependencies {
     implementation rootProject.ext.dependencies.coroutinesCore
     implementation rootProject.ext.dependencies.coroutinesAndroid
     implementation rootProject.ext.dependencies.coroutinesVM
+
+    implementation rootProject.ext.dependencies.navKtx
+    implementation rootProject.ext.dependencies.navUiKtx
 }
